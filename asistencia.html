@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>asistencia</title>
+</head>
+<body>
+    <header class="hero_3">
+        <div class="hero-content">
+        </div>
+    </header>
+
+    <div class="menu-container">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">¡Bienvenidos!</a>
+            <a href="nuestra_historia.html">Nuestra Historia</a>
+            <a href="asistencia.html">Asistencia</a>
+            <a href="localización_y_horario.html">Localización y Horarios</a>
+            <a href="alojamiento.html">Alojamiento</a>
+        </div>
+
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+      
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+    </div>
+
+    <main>
+        <section class="form-section">
+            <h2>Confirma tu asistencia</h2>
+            <form class="rsvp-form" action="https://formsubmit.co/albagraciasimon75@gmail.com" method="POST">
+                <label for="invitado_1">Nombre y apellido invitado 1:</label>
+                <input type="text" name="invitado_1" required />
+                <br>
+
+                <label for="invitado_2">Nombre y apellido invitado 2:</label>
+                <input type="text" name="invitado_2" required />
+                <br>
+
+                <label for="intolerancia">Intolerancias alimentarias:</label>
+                <input type="text" name="intolerancia" required/>
+                <br>
+
+                <label for="autobús">¿Requerimento de Autobús?</label>
+                <select name="autobus" required>
+                    <option value="">Selecciona</option>
+                    <option value="Sí, desde Huesca">Sí, desde Huesca</option>
+                    <option value="Sí, desde Barbastro">Sí, desde Barbastro</option>
+                    <option value="Sí, desde Fraga">Sí, desde Fraga</option>
+                    <option value="no">No</option>
+                </select>
+                <br>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        <div class="logo">
+            <img src="fotos/logo.png" alt="Alba y Aitor">
+        </div>
+    </main>
+
+    <footer>
+        <h4>Alba &amp; Aitor</h4>
+        <h5>03 de Octubre de 2026</h5>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

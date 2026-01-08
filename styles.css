@@ -1,0 +1,430 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Encabezados */
+.hero {
+  background: url('fotos/PREBODA\ ALBA\ &\ AITOR\ \(27\).jpg') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+/*contenedor logo*/
+.logo {
+  text-align: center;
+}
+
+/*Imagen del logo*/
+.logo img {
+  align-items: center;
+  height: 200px;
+  width: auto;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content_1 {
+  padding-top: 200px;
+  position: relative;
+  color: #ffffff;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.hero-content_1 h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.hero-content_1 p {
+  font-size: 1.25rem;
+}
+
+.hero_2 {
+  background: url('fotos/PREBODA\ ALBA\ &\ AITOR\ \(44\).jpg') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+.hero_2::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero_3 {
+  background: url('fotos/PREBODA\ ALBA\ &\ AITOR\ \(46\).jpg') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+.hero_3::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero_4 {
+  background: url('fotos/PREBODA\ ALBA\ &\ AITOR\ \(80\).jpg') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+.hero_4::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero_5 {
+  background: url('fotos/PREBODA\ ALBA\ &\ AITOR\ \(10\).jpg') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+.hero_5::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  color: #fff;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.hero-content p {
+  font-size: 1.25rem;
+}
+
+/* Menú Lateral */
+.menu-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.menu-btn {
+  font-size: 30px;
+  color: #fff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: width 0.3s ease;
+  padding-top: 60px;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.sidenav .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 36px;
+  color: #818181;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Contenido Principal */
+main {
+  padding: 2rem 1rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Contador */
+.countdown {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  color: #ffffff;
+}
+.timer div {
+  background: #000000;
+  border-radius: 8px;
+  padding: 1rem;
+  min-width: 80px;
+}
+.timer span {
+  font-size: 1.5rem;
+  display: block;
+}
+.timer small {
+  color: #ffffff;
+}
+
+/* Formulario */
+.form-section {
+  margin-bottom: 1rem;
+  font-family:'Times New Roman', Times, serif ;
+}
+
+.form-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family:'Times New Roman', Times, serif ;
+}
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.rsvp-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+.rsvp-form input,
+.rsvp-form select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.rsvp-form button {
+  padding: 0.75rem;
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.rsvp-form button:hover {
+  background: #0056b3;
+}
+
+/* Estilo Responsive */
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .timer {
+    flex-wrap: wrap;
+  }
+}
+
+/* Pie de Página */
+footer {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #dadada;
+}
+
+.seccion_1_index {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.seccion_1_index h1 {
+  font-size: 2rem;
+}
+
+.seccion_1_index p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.seccion_1_historia {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.seccion_1_historia p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.seccion_2_historia {
+  .slider {
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .slides {
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+  }
+
+  .slides img {
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  /* Indicadores */
+  .indicators {
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    }
+
+  .indicator {
+    align-items: center;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .indicator.active {
+    align-items: center;
+    background: white;
+  }
+}
+
+.seccion_1_localizacion_y_horario {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.seccion_1_localizacion_y_horario h1 {
+  font-size: 2rem;
+}
+
+.seccion_1_localizacion_y_horario p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.seccion_2_localizacion_y_horario {
+  .wrap { max-width: 300px; margin: 40px auto; padding: 0 16px; }
+  .square-r {
+    width: 100%;
+    aspect-ratio: 1 / 1;           /* fuerza proporción 1:1 */
+    display: grid;
+    place-items: center;           /* centra contenido con grid */
+    color: #111;
+    border-radius: 12px;
+    padding: 20px;                 /* sirve para que el texto no toque los bordes */
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    font-family: system-ui, sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.25rem); /* texto escalable */
+    text-align: center;
+  }
+
+  .wrap-2 { max-width: 300px; margin: 40px auto; padding: 0 16px; }
+  .square-r-2 {
+    width: 100%;
+    aspect-ratio: 1 / 1;           /* fuerza proporción 1:1 */
+    display: grid;
+    place-items: center;           /* centra contenido con grid */
+    color: #111;
+    border-radius: 12px;
+    padding: 20px;                 /* sirve para que el texto no toque los bordes */
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    font-family: system-ui, sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.25rem); /* texto escalable */
+    text-align: center;
+  }
+  
+  .wrap-3 { max-width: 300px; margin: 40px auto; padding: 0 16px; }
+  .square-r-3 {
+    width: 100%;
+    aspect-ratio: 1 / 1;           /* fuerza proporción 1:1 */
+    display: grid;
+    place-items: center;           /* centra contenido con grid */
+    color: #111;
+    border-radius: 12px;
+    padding: 20px;                 /* sirve para que el texto no toque los bordes */
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    font-family: system-ui, sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.25rem); /* texto escalable */
+    text-align: center;
+  }
+  
+  .wrap-4 { max-width: 300px; margin: 40px auto; padding: 0 16px; }
+  .square-r-4 {
+    width: 100%;
+    aspect-ratio: 1 / 1;           /* fuerza proporción 1:1 */
+    display: grid;
+    place-items: center;           /* centra contenido con grid */
+    color: #111;
+    border-radius: 12px;
+    padding: 20px;                 /* sirve para que el texto no toque los bordes */
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    font-family: system-ui, sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.25rem); /* texto escalable */
+    text-align: center;
+  }
+}

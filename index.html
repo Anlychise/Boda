@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Acceso protegido</title>
+</head>
+<body>
+
+<p>🔐 Verificando acceso...</p>
+
+<script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+
+<script>
+let auth0Client;
+
+const config = {
+  domain: "dev-8xbplewsoes6gpc5.us.auth0.com",
+  clientId: "i1GD5Anh7wPtWLJTilPsjsJro2YkbC24",
+  authorizationParams: {
+    redirect_uri: window.location.origin + window.location.pathname
+  }
+};
+
+async function init() {
+  auth0Client = await auth0.createAuth0Client(config);
+
+  // Manejar retorno desde Auth0
+  if (window.location.search.includes("code=")) {
+    await auth0Client.handleRedirectCallback();
+    window.history.replaceState({}, document.title, window.location.pathname);
+  }
+
+  const isAuthenticated = await auth0Client.isAuthenticated();
+
+  if (!isAuthenticated) {
+    // FORZAR LOGIN
+    await auth0Client.loginWithRedirect({
+      authorizationParams: {
+        prompt: "login"
+      }
+    });
+  } else {
+    // ✅ ACCESO OK → REDIRIGIR
+    window.location.href = "inicio.html";
+  }
+}
+
+init();
+</script>
+
+</body>
+</html>

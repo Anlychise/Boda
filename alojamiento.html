@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>alojamiento</title>
+</head>
+<body>
+    <header class="hero_5">
+        <div class="hero-content">
+        </div>
+    </header>
+
+    <div class="menu-container">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">¡Bienvenidos!</a>
+            <a href="nuestra_historia.html">Nuestra Historia</a>
+            <a href="asistencia.html">Asistencia</a>
+            <a href="localización_y_horario.html">Localización y Horarios</a>
+            <a href="alojamiento.html">Alojamiento</a>
+        </div>
+
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+      
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+    </div>
+
+    <main>
+        <section class="seccion_1_localizacion_y_horario">
+            <h1>Alojamiento</h1>
+            <br>
+            <p>Si necesitas alojamiento, contamos con un código promocional en el <b>"Gran Hotel Ciudad de Barbastro"</b>. Desde aquí se podrá llegar al lugar de la celebración en autobús quien lo desee.</p>
+            <br>
+            <p>Código promocional: <b>AYA03102026</b></p>
+            <br>
+            <p><b>¡No hay excusas para no venir!</b></p>
+        </section>
+        <section class="seccion_2_localizacion_y_horario">
+            <div class="wrap">
+                <div class="square-r">
+                    <h2 style="font-family: 'Times New Roman', Times, serif;">Localización Hotel</h2>
+                    <p style="font-family: 'Times New Roman', Times, serif;">Plaza del Mercado, 4, 22300, Barbastro, Huesca</p>
+                    <p style="font-family: 'Times New Roman', Times, serif;"><a href="https://www.ghbarbastro.com/">Gran Hotel Ciudad de Barbastro</a></p>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="fotos/logo.png" alt="Alba y Aitor">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h4>Alba &amp; Aitor</h4>
+        <h5>03 de Octubre de 2026</h5>
+    </footer>
+</body>
+</html>

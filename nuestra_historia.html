@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>nuestra_historia</title>
+</head>
+<body>
+    <header class="hero_2">
+        <div class="hero-content">
+        </div>
+    </header>
+
+    <div class="menu-container">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">¡Bienvenidos!</a>
+            <a href="nuestra_historia.html">Nuestra Historia</a>
+            <a href="asistencia.html">Asistencia</a>
+            <a href="localización_y_horario.html">Localización y Horarios</a>
+            <a href="alojamiento.html">Alojamiento</a>
+        </div>
+
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+      
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+    </div>
+
+    <main>
+        <section class="seccion_1_historia">
+            <h1>Nuestra Historia</h1>
+            <br>
+            <p>Amigos un tanto pesados. Una encerrona. Nochevieja. Un sin más. Menos mal que fue un sin más...</p>
+            <br>
+            <p>Y así paso el tiempo, hasta que este chico decidió venir a buscarme a mí castillo, como a él le gusta contar. Yo solo tenía una obligación: No ser borde con él (algo que, curiosamente, no me costó. Quien me conoce sabe que soy como un cactus).</p>
+            <br>
+            <p>Lo que no sabíamos es que, desde ese primer "Hola, soy el amigo de Óscar, ¿Te acuerdas de mi?, íbamos a sentir que nos conocíamos de toda la vida. Como si nuestros caminos se hubieran cruzado mil veces antes sin saberlo.</p>
+            <br>
+            <p>Y así comenzó todo. Conversaciones interminables, risas sinceras, miradas cómplices y alguna que otra andada. Bueno más bien una. Ahí, estaban ellos, Riglos. Siempre estuvieron ahí.</p>
+            <br>
+            <p>Poco a poco, nos fuimos enseñando el mundo el uno al otro. Con paciencia, abrazando los miedos del otro, aprendiendo a estar y juntos construimos está historia. Nuestra historia.</p>
+            <br>
+            <p>Y aquí seguimos, caminando juntos, sabiendo que esto solo es el principio...</p>
+        </section>
+        <br>
+        <section class="seccion_2_historia">
+            <div class="slider">
+                <div class="slides">
+                    <img src="fotos/PREBODA ALBA & AITOR (110).jpg" alt="Foto 1" />
+                    <img src="fotos/PREBODA ALBA & AITOR (90).jpg" alt="Foto 2" />
+                    <img src="fotos/PREBODA ALBA & AITOR (54).jpg" alt="Foto 3" />
+                    <img src="fotos/PREBODA ALBA & AITOR (57).jpg" alt="Foto 4" />
+                </div>
+                <div class="indicators"></div>
+            </div>
+
+            <script>
+                const slides = document.querySelector(".slides");
+                const totalSlides = slides.children.length;
+                const indicatorsContainer = document.querySelector(".indicators");
+                let currentIndex = 0;
+
+                // Crear indicadores
+                for (let i = 0; i < totalSlides; i++) {
+                    const dot = document.createElement("div");
+                    dot.classList.add("indicator");
+                    if (i === 0) dot.classList.add("active");
+                    dot.addEventListener("click", () => goToSlide(i));
+                    indicatorsContainer.appendChild(dot);
+                }
+
+                const indicators = document.querySelectorAll(".indicator");
+
+                function goToSlide(index) {
+                    currentIndex = index;
+                    slides.style.transform = `translateX(-${index * 100}%)`;
+                    indicators.forEach((dot, i) =>
+                    dot.classList.toggle("active", i === index)
+                    );
+                }
+
+                function nextSlide() {
+                    currentIndex = (currentIndex + 1) % totalSlides;
+                    goToSlide(currentIndex);
+                }
+
+                setInterval(nextSlide, 5000); // Cambia cada 10 segundos
+            </script>
+        </section>
+        <div class="logo">
+            <img src="fotos/logo.png" alt="Alba y Aitor">
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <h4>Alba &amp; Aitor</h4>
+        <h5>03 de Octubre de 2026</h5>
+    </footer>
+</body>
+</html>
